@@ -1,0 +1,27 @@
+.digital{
+    background-color: rgba(127, 142, 255, 0.444);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.space {
+    width: 18rem;
+    height: 5rem;
+    margin: auto;
+    border: 0.5rem solid black;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #121212;
+}
+
+.space div {
+   font-size: 2rem;
+   color: white;
+   margin: auto;
+}
+
+.digital.none{
+    display: none;
+}
