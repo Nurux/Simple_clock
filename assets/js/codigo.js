@@ -2,11 +2,14 @@ const hours = document.querySelector('.horas')
 const minutes = document.querySelector('.minutos')
 const seg = document.querySelector('.segundos')
 
+const dark = document.querySelector('#darkmode')
 const clock = document.querySelector('#tclock')
+const menu = document.querySelector('.menu')
+
 const clockAnalog = document.querySelector('.clock')
 const clockDigital = document.querySelector('.digital')
 
-function analog(){
+setInterval(function analog(){
     const agora = new Date();
 
     const seconds = agora.getSeconds();
@@ -18,11 +21,11 @@ function analog(){
     minutes.style.transform = `rotate(${min}deg)`
 
     const horas = agora.getHours();
-    const ho = ((horas / 60) * 360) + 270;
+    const ho = ((horas / 60) * 360) + 340;
     hours.style.transform = `rotate(${ho}deg)`
-}
+})
 
-function digital(){
+setInterval(function digital() {
     const h = document.querySelector('.dhoras')
     const m = document.querySelector('.dminutos')
     const s = document.querySelector('.dsegundos')
@@ -35,8 +38,7 @@ function digital(){
     h.textContent = hora
     m.textContent = minuto
     s. textContent = segundo
-}
-
+})
 
 clock.addEventListener('click', () => {
     clock.setAttribute('digi', 'true')
@@ -44,15 +46,8 @@ clock.addEventListener('click', () => {
     clockDigital.classList.toggle('none')
 })
 
-
-function ver() {
-    if(clock.getAttribute('digi') == 'true'){
-        console.log('aui')
-        setInterval(digital(), 1000);
-    } else {
-        setInterval(analog(), 1000);
-    }
-}
-
-
-setInterval(ver(), 1000)
+dark.addEventListener('click', () => {
+    menu.classList.toggle('darkmode')
+    clockAnalog.classList.toggle('darkmode')
+    clockDigital.classList.toggle('darkmode')
+})

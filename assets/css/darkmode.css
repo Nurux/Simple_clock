@@ -1,0 +1,28 @@
+.menu.darkmode{
+    background-color: none;
+}
+
+.menu.darkmode button {
+    background-color: #47CF73;
+}
+
+.digital.darkmode {
+    background-color: #1E1F26;
+}
+
+.digital.darkmode .space {
+    background-color: #191A1F;
+    border-color: #47CF73;
+}
+
+.clock.darkmode {
+    background-color: #1E1F26;
+}
+
+.clock.darkmode .corpo {
+   border-color: #47CF73;
+}
+
+.clock.darkmode .ponteiros {
+    background-color: #47CF73;
+}
